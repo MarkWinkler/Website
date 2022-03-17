@@ -1,0 +1,16 @@
+/*************************************************
+
+Global Syles for the "Coding Challenge" website
+
+/*************************************************/
+
+body {
+	margin: 0;
+	font-family: "Calibri", sans-serif;
+	background-color: #f7f7f7;
+}
+
+h1 {
+	font-size: 4em;
+	text-align: center;
+}
