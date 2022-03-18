@@ -12,12 +12,44 @@ body {
 	background-color: #242424;
 }
 
+/******************************
+
+        Headings
+
+******************************/
+
 h1 {
 	font-family: 'Roboto Mono', monospace;
 	color: #eeeeee;
 	font-size: 4em;
 	text-align: center;
 }
+
+@keyframes sectionFade { /* From 0 (invisible) to 1 (no opacity) */
+	0%	{ opacity: 0 }
+	50% { opacity: 0}
+	100% { opacity: 1}
+}
+
+section {
+	font-size: 1.3em;
+	padding: 0 0.4em;
+	animation-name: sectionFade;
+	animation-duration: 1.5s;	/* Lenght */
+	animation-iteration-count: 1; /* Play once */
+}
+
+
+.welcomeText {
+	color: #eeeeee;
+	font-size: 1.3em;
+	font-style: italic;
+	padding: 0 0.4em;
+	animation-name: sectionFade;
+	animation-duration: 1.5s;
+	animation-iteration-count: 1;
+}
+
 
 .loginWindow {
 	display: block;
@@ -28,12 +60,21 @@ h1 {
 	width: 250px;
 	height: 250px;
 	background: #242424;
-	top: 50%;
+	top: 30%;
 	left: 50%;
 	margin: -110px 0 0 -100px;
 	padding: 20px;
 	border-radius: 4px;
 	box-sizing: border-box;
+	animation-name: loginFade;
+	animation-duration: 2s;	/* Lenght */
+	animation-iteration-count: 1; /* Play once */
+}
+
+@keyframes loginFade {
+	25%	{ opacity: 0 }
+	50% { opacity: 0}
+	100% { opacity: 1}
 }
 
 .button {
@@ -44,6 +85,7 @@ h1 {
 	text-align: center;
 	display: inline-block;
 	font-size: 1em;
+	cursor: pointer;
 }
 
 .button:hover {
@@ -89,4 +131,51 @@ a:active {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 50% 50%;
+}
+
+/******************************
+
+          Breakpoint
+
+  Larger than Mobile devices
+            500px
+
+******************************/
+
+section {
+	padding-top: 4em;
+	width: 90%;
+	margin: 0 auto;
+}
+
+
+/******************************
+
+          Breakpoint
+
+          Laptop Size
+            1024px
+
+******************************/
+
+@media screen and (min-width: 1024px) {
+	section {
+		width: 60%;
+	}
+}
+
+/******************************
+
+          Breakpoint
+
+    Small monitor/laptop Size
+            1366px
+
+******************************/
+
+@media screen and (min-width: 1366px) {
+	section {
+		width: 58%;
+	}
+
 }
