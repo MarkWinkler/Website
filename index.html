@@ -20,21 +20,40 @@ Website with login page and map using Google Maps API
     <!-- favicon used -->
     <link rel="icon" type="image/x-icon" href="images/favicon.png">
 
+    <!-- Google Fonts reference -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <script src="js/app.js"></script>
+
   </head>
   <!-- End of head -->
   
   <!-- Start of body -->
   <body>
+
+  <h1>E-Future</h1>
+
+  <div class="loginWindow">
+    <div class="registerPrompt">New here? <a href="www.isitchristmas.com">Register now</a></div>
+    <form>
+      <label for="uname">Username</label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+      <label for="psw">Password</label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+    </form>
+    <div class="button">Log in</div>
+
+  </div>
+
+  <div id="particles-js"></div>
+  <!-- From: https://github.com/VincentGarreau/particles.js/ -->
+  <script src="js/particles.js"></script>
+  <script src="js/app.js"></script>
   
-  <h1>Test</h1>
-  
+
 
   </body>
   <!-- End of body -->
-
-  
-  
-  
-
 
 </html>
