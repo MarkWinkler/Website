@@ -43,22 +43,28 @@ Website with login page and map using Google Maps API
 
     <div id="particles-js"></div> <!-- Background animation -->
     <section id="login">
-      <form class="loginWindow" action="home.html" method="post">
-        <div class="forgotPrompt">Forgot your <a href="www.isitchristmas.com">password?</a></div>
+      <form class="loginWindow">
+        <div class="forgotPrompt">Forgot your <a href="#ok">password?</a></div>
           <label for="uname"><b>Email address</b></label>
           <input type="email" placeholder="Enter your email" name="uname" required>
 
           <label for="psw"><b>Password</b></label>
           <input type="password" placeholder="Enter Password" name="psw" required>
 
-          <button type="submit" class="button">Login</button>
+          <a href="https://markwinkler.github.io/websiteTask/home.html">
+            <button class="button" type="button" href="">Login</button>
+          </a>
           <label>
-
             <input type="checkbox" checked="checked" name="remember"> Remember me
           </label>
         </form>
-      </form>
+      </form><div>
+
+
+    </div>
+
     </section>
+
 
   <!-- From: https://github.com/VincentGarreau/particles.js/ -->
     <script src="scripts/particles.js"></script>
