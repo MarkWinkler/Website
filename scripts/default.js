@@ -1,7 +1,5 @@
 "use strict"; // JavaScript  in strict mode
 
-
-
 // Mobile navigation
 (function(){
 
@@ -23,7 +21,6 @@
 })();
 
 function openNav() {
-
     // Get screen width to size the navigation bar
     const width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 

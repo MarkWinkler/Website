@@ -1,6 +1,6 @@
 /*************************************************
 
-Global Styles for the "Coding Challenge" website
+Global Styles for the Coding Challenge website
 
 /*************************************************/
 
@@ -11,7 +11,7 @@ header {
 
 body {
 	margin: 0 auto;
-	font-family: "Calibri", sans-serif;
+	font-family: 'Roboto Mono', monospace;
 	background-color: #242424;
 }
 
@@ -32,7 +32,7 @@ h1 {
 h2 {
 	font-family: 'Roboto Mono', monospace;
 	color: #fcfcfc;
-	font-size: 2em;
+	font-size: 1.5em;
 	text-align: center;
 }
 
@@ -163,20 +163,6 @@ input[type=email], input[type=password] {
 
 /******************************
 
-          Map section
-
-******************************/
-
-#map {
-	display: block;
-	margin: 0 auto;
-	height: 40em;
-	width: 100%;
-	padding: 0;
-}
-
-/******************************
-
         Navigation
 
 ******************************/
@@ -206,7 +192,7 @@ input[type=email], input[type=password] {
 	display: none; /* hidden on mobiles */
 	font-size: 2em;
 	color: #fcfcfc;
-	background: #424242;
+	background: #0b7a10;
 	border: 0;
 	padding: 10px 15px;
 	background-clip: padding-box;
@@ -215,7 +201,7 @@ input[type=email], input[type=password] {
 }
 
 .desktopMenuButton:hover {
-	background-color: #0b7a10;
+	background-color: #424242;
 }
 
 .mobileMenu {
@@ -239,7 +225,6 @@ input[type=email], input[type=password] {
 	background-color: #383838;
 	overflow-x: hidden;
 	transition: 0.4s;
-	padding-top: 50px;
 }
 
 #nav-menu a {
@@ -249,16 +234,13 @@ input[type=email], input[type=password] {
 	font-size: 1.4em;
 	color: #fcfcfc;
 	padding: 0 .5em;
-	line-height: 1.8em;
+	line-height: 3em;
 	transition: .5s;
 }
 
 #nav-menu .close {
-	position: absolute;
-	top: 0;
-	right: 25px;
-	font-size: 36px;
-	margin-left: 50px;
+	position: relative;
+	background-color: #4f4f4f;
 }
 
 #nav-colours li:nth-child(1) a:hover {
@@ -277,6 +259,10 @@ input[type=email], input[type=password] {
 	background-color: #c57400;
 }
 
+#nav-colours li:nth-child(5) a:hover {
+	background-color: #626262;
+}
+
 
 nav li:last-child a {
 	border-bottom: none;
@@ -289,6 +275,9 @@ nav li:last-child a {
 	margin: 0 0;
 }
 
+.logOut {
+	background-color: #2c2c2c;
+}
 
 #overlay {
 	position: fixed;
@@ -329,14 +318,44 @@ nav li:last-child a {
 	padding: 10px 20px;
 	text-align: center;
 	display: inline-block;
-	font-size: 1.5em;
+	font-size: 1.2em;
 	cursor: pointer;
 	border: none;
-	width: 80%;
+	width: 85%;
 }
 
 .profileButton:hover {
 	background-color: #424242;
+}
+
+#profile {
+	background-color: #006e0b;
+}
+
+#profile:hover {
+	background-color: #424242;
+}
+
+#settings {
+	background-color: #006e0b;
+}
+
+#settings:hover {
+	background-color: #424242;
+}
+
+/******************************
+
+          Map section
+
+******************************/
+
+#map {
+	display: block;
+	margin: 0 auto;
+	height: 50em;
+	width: 100%;
+	padding: 0;
 }
 
 /******************************
@@ -348,24 +367,38 @@ nav li:last-child a {
 
 ******************************/
 @media screen and (min-width: 500px) {
+
 	.desktopMenuButton {
 		display: block; /* visible on larger devices */
 		width: 100px;
 	}
+	#nav-menu {
+		padding-top: 50px;
+	}
+	#nav-menu .close {
+		position: absolute;
+		top: 0;
+		right: 25px;
+		font-size: 36px;
+		margin-left: 50px;
+		line-height: 40px;
+		padding: 10px;
+		background-color: #383838;
+	}
+
+	h2 {
+		font-size: 2em;
+	}
 	.profileButton {
-		width: 140px;
+		font-size: 1.2em;
 	}
 	#profileSection {
 		text-align: center;
 		align-items: center;
-		padding: 0;
 	}
 	.mobileMenu {
 		display: none;
 		cursor: pointer;
-	}
-	.flex-grid {
-		display: flex;
 	}
 	.flex-grid-profile {
 		display: flex;
@@ -381,6 +414,22 @@ nav li:last-child a {
 	.loginWindow {
 		width: 80%;
 	}
+}
+
+/******************************
+
+          Breakpoint
+
+          Tablet Size
+            768px
+
+******************************/
+
+@media screen and (min-width: 768px) {
+	.profileButton {
+		width: 100%;
+	}
+
 }
 
 
@@ -399,6 +448,15 @@ nav li:last-child a {
 	}
 	.loginWindow {
 		width: 70%;
+	}
+	.profileButton {
+		width: 250px;
+	}
+	#profileSection {
+		padding-top: 0;
+	}
+	.flex-grid {
+		display: flex;
 	}
 }
 
@@ -419,6 +477,10 @@ nav li:last-child a {
 
 	.loginWindow {
 		width: 50%;
+	}
+
+	.profileButton {
+		width: 350px;
 	}
 }
 

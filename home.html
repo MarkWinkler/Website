@@ -198,33 +198,35 @@
         <span class="mobileMenu" onclick="openNav()">&#9776;</span>
       </div>
         <nav id="nav-menu">
-          <a href="javascript:void(0)" class="close" onclick="closeNav()">&times;</a>
+          <a href="javascript:void(0)" class="close" onclick="closeNav()">&times;</a><br>
           <ul class="nav" id="nav-colours">
             <li><a href="#home">Home</a></li>
             <li><a href="#fleet">Fleet</a></li>
             <li><a href="#infrastructure">Infrastructure</a></li>
             <li><a href="#sales">Sales</a></li>
+            <li class="logOut"><a href="markwinkler.github.io/websitetask/">Log out</a></li>
           </ul>
         </nav>
 
+
       <div class="col" id="profileSection">
         <div class="flex-grid-profile">
-          <div class="col" id="profile">
-            <a class="profileButton">
+          <div class="col">
+            <a class="profileButton" id="profile">
               <img class="avatar" src="images/avatar.png" alt="Your profile picture">
               <br>
               My profile
             </a>
           </div>
           <div class="col">
-            <a class="profileButton">
+            <a class="profileButton" id="myVehicle">
               <img class="avatar" src="images/electricVehicle.png" alt="Your profile picture">
               <br>
               My vehicle
             </a>
           </div>
           <div class="col">
-            <a class="profileButton">
+            <a class="profileButton" id="settings">
               <img class="avatar" src="images/cogwheel.png" alt="Your profile picture">
               <br>
               Settings
