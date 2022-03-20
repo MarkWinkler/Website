@@ -24,7 +24,7 @@ Website with login page and map using Google Maps API
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
-    <script src="js/app.js"></script>
+    <script src="scripts/app.js"></script>
 
   </head>
   <!-- End of head -->
@@ -32,33 +32,37 @@ Website with login page and map using Google Maps API
   <!-- Start of body -->
   <body>
 
-  <h1>E-Future</h1>
+    <h1>E-Future</h1>
 
-  <section class="welcomeText">
-    <p>
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet erat rhoncus, rhoncus quam sed,
-      suscipit est. Aliquam tincidunt nisl ac dui iaculis fermentum."
-    </p>
-  </section>
+    <section id="welcomeText">
+      <p>
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet erat rhoncus, rhoncus quam sed,
+        suscipit est. Aliquam tincidunt nisl ac dui iaculis fermentum."
+      </p>
+    </section>
 
+    <div id="particles-js"></div> <!-- Background animation -->
+    <section id="login">
+      <form class="loginWindow" action="home.html" method="post">
+        <div class="forgotPrompt">Forgot your <a href="www.isitchristmas.com">password?</a></div>
+          <label for="uname"><b>Email address</b></label>
+          <input type="email" placeholder="Enter your email" name="uname" required>
 
-  <div class="loginWindow">
-    <div class="registerPrompt">New here? <a href="www.isitchristmas.com">Register now</a></div>
-    <form>
-      <label for="uname">Username</label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-      <label for="psw">Password</label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-    </form>
-    <div class="button">Log in</div>
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
 
-  </div>
+          <button type="submit" class="button">Login</button>
+          <label>
 
-  <div id="particles-js"></div>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+        </form>
+      </form>
+    </section>
+
   <!-- From: https://github.com/VincentGarreau/particles.js/ -->
-  <script src="js/particles.js"></script>
-  <script src="js/app.js"></script>
-
+    <script src="scripts/particles.js"></script>
+    <script src="scripts/app.js"></script>
   </body>
   <!-- End of body -->
 

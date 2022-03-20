@@ -1,13 +1,16 @@
 /*************************************************
 
-Global Syles for the "Coding Challenge" website
+Global Styles for the "Coding Challenge" website
 
 /*************************************************/
 
-
+header {
+	text-align: left;
+	padding-top: 2px;
+}
 
 body {
-	margin: 0;
+	margin: 0 auto;
 	font-family: "Calibri", sans-serif;
 	background-color: #242424;
 }
@@ -20,61 +23,87 @@ body {
 
 h1 {
 	font-family: 'Roboto Mono', monospace;
-	color: #eeeeee;
+	color: #fcfcfc;
 	font-size: 4em;
 	text-align: center;
 }
 
-@keyframes sectionFade { /* From 0 (invisible) to 1 (no opacity) */
-	0%	{ opacity: 0 }
-	50% { opacity: 0}
-	100% { opacity: 1}
+
+h2 {
+	font-family: 'Roboto Mono', monospace;
+	color: #fcfcfc;
+	font-size: 2em;
+	text-align: center;
 }
 
-section {
-	font-size: 1.3em;
-	padding: 0 0.4em;
-	animation-name: sectionFade;
-	animation-duration: 1.5s;	/* Lenght */
-	animation-iteration-count: 1; /* Play once */
+h3 {
+	font-family: 'Roboto Mono', monospace;
+	color: #fcfcfc;
+	font-size: 1.5em;
+	text-align: center;
 }
 
-
-.welcomeText {
-	color: #eeeeee;
+#welcomeText {
+	color: #fcfcfc;
 	font-size: 1.3em;
 	font-style: italic;
-	padding: 0 0.4em;
+	padding: 0;
 	animation-name: sectionFade;
 	animation-duration: 1.5s;
 	animation-iteration-count: 1;
 }
 
 
-.loginWindow {
-	display: block;
-	color: #eeeeee;
+@keyframes sectionFade { /* From 0 (invisible) to 1 (no opacity) */
+	0%	{ opacity: 0 }
+	50% { opacity: 0 }
+	100% { opacity: 1 }
+}
+
+section {
 	font-size: 1.3em;
-	position: absolute;
-	z-index: 10;
-	width: 250px;
-	height: 250px;
-	background: #242424;
-	top: 30%;
-	left: 50%;
-	margin: -110px 0 0 -100px;
-	padding: 20px;
-	border-radius: 4px;
-	box-sizing: border-box;
-	animation-name: loginFade;
-	animation-duration: 2s;	/* Lenght */
+	animation-name: sectionFade;
+	animation-duration: 1.5s;	/* Lenght */
 	animation-iteration-count: 1; /* Play once */
 }
 
+
+
+/******************************
+
+        Login window
+
+******************************/
+
+
+.loginWindow {
+	background: #242424;
+	color: #fcfcfc;
+	margin: auto;
+	padding: 20px;
+	position: relative;
+	z-index: 1;
+}
+
+.loginForm {
+	color: #fcfcfc;
+	margin: 5% auto 15% auto;
+	border: 1px solid #888;
+	width: 80%;
+}
+
 @keyframes loginFade {
-	25%	{ opacity: 0 }
-	50% { opacity: 0}
-	100% { opacity: 1}
+	0% {
+		transform: scale(0);
+		opacity: 0;
+	}
+	50% {
+		opacity: 0.2;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
 }
 
 .button {
@@ -86,13 +115,14 @@ section {
 	display: inline-block;
 	font-size: 1em;
 	cursor: pointer;
+	border: none;
 }
 
 .button:hover {
 	opacity: 0.7;
 }
 
-.registerPrompt {
+.forgotPrompt {
 	text-align: right;
 	font-size: 0.8em;
 	padding-bottom: 20px;
@@ -107,30 +137,206 @@ a:link {
 a:visited {
 	color: #6643ea;
 	background-color: transparent;
-	text-decoration: none;
-}
-
-a:hover {
-	color: #0b7a10;
-	background-color: transparent;
-	text-decoration: underline;
 }
 
 a:active {
-	color: yellow;
+	color: #0b7a10;
 	background-color: transparent;
-	text-decoration: underline;
 }
+
+input[type=email], input[type=password] {
+	width: 100%;
+	padding: 14px 18px;
+	margin: 10px 0;
+	display: inline-block;
+	box-sizing: border-box;
+}
+
 
 #particles-js {
 	position:absolute;
 	width: 100%;
 	height: 100%;
-	background-color: #383838;
-	background-image: url("");
-	background-repeat: no-repeat;
+	background: linear-gradient(#383838, #383838) no-repeat;
 	background-size: cover;
-	background-position: 50% 50%;
+}
+
+/******************************
+
+          Map section
+
+******************************/
+
+#map {
+	display: block;
+	margin: 0 auto;
+	height: 40em;
+	width: 100%;
+	padding: 0;
+}
+
+/******************************
+
+        Navigation
+
+******************************/
+
+.flex-grid {
+	display: block;
+}
+
+.flex-grid-profile {
+	display: block;
+	align-items: center;
+	justify-content: center;
+}
+
+.flex-grid-profile-down {
+	background-color: #555555;
+	display: block;
+	align-items: center;
+	justify-content: center;
+}
+
+.col {
+	flex: 1;
+}
+
+.desktopMenuButton {
+	display: none; /* hidden on mobiles */
+	font-size: 2em;
+	color: #fcfcfc;
+	background: #424242;
+	border: 0;
+	padding: 10px 15px;
+	background-clip: padding-box;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+
+.desktopMenuButton:hover {
+	background-color: #0b7a10;
+}
+
+.mobileMenu {
+	font-size: 2em;
+	color: #fcfcfc;
+	background: #0b7a10;
+	border: 0;
+	padding: 10px 15px;
+	background-clip: padding-box;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+
+#nav-menu {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	background-color: #383838;
+	overflow-x: hidden;
+	transition: 0.4s;
+	padding-top: 50px;
+}
+
+#nav-menu a {
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	font-size: 1.4em;
+	color: #fcfcfc;
+	padding: 0 .5em;
+	line-height: 1.8em;
+	transition: .5s;
+}
+
+#nav-menu .close {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+}
+
+#nav-colours li:nth-child(1) a:hover {
+	background-color: #006b00;
+}
+
+#nav-colours li:nth-child(2) a:hover {
+	background-color: #008391;
+}
+
+#nav-colours li:nth-child(3) a:hover {
+	background-color: #410080;
+}
+
+#nav-colours li:nth-child(4) a:hover {
+	background-color: #c57400;
+}
+
+
+nav li:last-child a {
+	border-bottom: none;
+}
+
+/* The ul class within nav. */
+.nav {
+	list-style: none;
+	padding: 5px 0;
+	margin: 0 0;
+}
+
+
+#overlay {
+	position: fixed;
+	display: none;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 5;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+/******************************
+
+        Profile
+
+******************************/
+
+.avatar {
+	width: 40px;
+	height: 45px;
+}
+
+#avatarSection {
+	text-align: center;
+}
+
+#profileSection {
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	padding-top: 20px;
+}
+
+.profileButton {
+	color: #eeeeee;
+	background-color: #0b7a10;
+	padding: 10px 20px;
+	text-align: center;
+	display: inline-block;
+	font-size: 1.5em;
+	cursor: pointer;
+	border: none;
+	width: 80%;
+}
+
+.profileButton:hover {
+	background-color: #424242;
 }
 
 /******************************
@@ -141,11 +347,40 @@ a:active {
             500px
 
 ******************************/
-
-section {
-	padding-top: 4em;
-	width: 90%;
-	margin: 0 auto;
+@media screen and (min-width: 500px) {
+	.desktopMenuButton {
+		display: block; /* visible on larger devices */
+		width: 100px;
+	}
+	.profileButton {
+		width: 140px;
+	}
+	#profileSection {
+		text-align: center;
+		align-items: center;
+		padding: 0;
+	}
+	.mobileMenu {
+		display: none;
+		cursor: pointer;
+	}
+	.flex-grid {
+		display: flex;
+	}
+	.flex-grid-profile {
+		display: flex;
+	}
+	.flex-grid-profile-down {
+		display: flex;
+	}
+	section {
+		padding: 4em 0.4em 2em;
+		width: 90%;
+		margin: 0 auto;
+	}
+	.loginWindow {
+		width: 80%;
+	}
 }
 
 
@@ -162,7 +397,11 @@ section {
 	section {
 		width: 60%;
 	}
+	.loginWindow {
+		width: 70%;
+	}
 }
+
 
 /******************************
 
@@ -178,4 +417,11 @@ section {
 		width: 58%;
 	}
 
+	.loginWindow {
+		width: 50%;
+	}
 }
+
+
+
+
