@@ -24,7 +24,7 @@ body {
 h1 {
 	font-family: 'Roboto Mono', monospace;
 	color: #fcfcfc;
-	font-size: 4em;
+	font-size: 2em;
 	text-align: center;
 }
 
@@ -45,9 +45,9 @@ h3 {
 
 #welcomeText {
 	color: #fcfcfc;
-	font-size: 1.3em;
+	font-size: 1em;
 	font-style: italic;
-	padding: 0;
+	padding: 5px;
 	animation-name: sectionFade;
 	animation-duration: 1.5s;
 	animation-iteration-count: 1;
@@ -391,8 +391,15 @@ nav li:last-child a {
 		background-color: #383838;
 	}
 
+	h1 {
+		font-size: 2.5em;
+	}
+
 	h2 {
 		font-size: 2em;
+	}
+	#welcomeText {
+		font-size: 1.1em;
 	}
 	.profileButton {
 		font-size: 1.2em;
@@ -431,6 +438,15 @@ nav li:last-child a {
 ******************************/
 
 @media screen and (min-width: 768px) {
+
+	h1 {
+		font-size: 3em;
+	}
+
+	#welcomeText {
+		font-size: 1.2em;
+	}
+
 	.profileButton {
 		width: 100%;
 	}
@@ -452,6 +468,15 @@ nav li:last-child a {
 ******************************/
 
 @media screen and (min-width: 1024px) {
+
+	h1 {
+		font-size: 4em;
+	}
+
+	#welcomeText {
+		font-size: 1.3em;
+	}
+
 	section {
 		width: 60%;
 	}
